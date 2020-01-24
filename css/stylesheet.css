@@ -1,0 +1,152 @@
+.containerScore {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 20px;
+}
+
+#hands,
+#rock,
+#paper,
+#scissors {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  width: 250px;
+}
+
+#interface {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.playButtons {
+  box-shadow: inset 0px 1px 0px 0px #fff6af;
+  background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+  background-color: #ffec64;
+  border-radius: 6px;
+  border: 1px solid #ffaa22;
+  display: inline-block;
+  cursor: pointer;
+  color: #333333;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+}
+.playButtons:hover {
+  background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+  background-color: #ffab23;
+}
+.playButtons:active {
+  position: relative;
+  top: 1px;
+}
+
+.rockButton {
+  box-shadow: inset 0px 1px 0px 0px #a6827e;
+  background: linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+  background-color: #7d5d3b;
+  border-radius: 3px;
+  border: 1px solid #54381e;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #4d3534;
+}
+.rockButton:hover {
+  background: linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+  background-color: #634b30;
+}
+.rockButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.paperButton {
+  box-shadow: inset 0px 1px 0px 0px #e3e3e3;
+  background: linear-gradient(to bottom, #f0f2f5 5%, #a6acb3 100%);
+  background-color: #f0f2f5;
+  border-radius: 3px;
+  border: 1px solid #cdced1;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
+}
+.paperButton:hover {
+  background: linear-gradient(to bottom, #a6acb3 5%, #f0f2f5 100%);
+  background-color: #a6acb3;
+}
+.paperButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.scissorsButton {
+  box-shadow: inset 0px 1px 0px 0px #9fb4f2;
+  background: linear-gradient(to bottom, #7892c2 5%, #a6acb3 100%);
+  background-color: #7892c2;
+  border-radius: 3px;
+  border: 1px solid #4e6096;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
+}
+.scissorsButton:hover {
+  background: linear-gradient(to bottom, #a6acb3 5%, #7892c2 100%);
+  background-color: #a6acb3;
+}
+.scissorsButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.log {
+  margin-top: 30px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 3px 6px #ccc;
+}
+
+.log ul {
+  list-style: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.log ul li {
+  margin: 5px;
+}
+
+.log ul .player-win {
+  color: greenyellow;
+  background-color: green;
+}
+
+.log ul .npc-win {
+  color: red;
+  background-color: #ffc0c1;
+}
+
+.log ul .tie-game {
+  color: yellow;
+  background-color: grey;
+}

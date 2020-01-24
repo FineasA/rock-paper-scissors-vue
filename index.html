@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../Rock-Paper-Scissors/css/stylesheet.css">
+        <script src="../Rock-Paper-Scissors/vuejs/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div id="npc">
+                <div class="containerScore">
+                    <div id="player-score">Player Score: {{playerScore}}</div>
+                    <div id="npc-score">NPC Score: {{npcScore}}</div>
+                </div>
+                <!-- image of fist, image of rock, image of paper, image of scissors -->
+                <img v-show="!hasPlayerChosen" id="hands" src="../Rock-Paper-Scissors/imgs/hands.png" alt="hands">
+                <img v-if="npcRockChoice" id="rock" src="../Rock-Paper-Scissors/imgs/rock.png" alt="rock">
+                <img v-if="npcPaperChoice" id="paper" src="../Rock-Paper-Scissors/imgs/paper.png" alt="paper">
+                <img v-if="npcScissorsChoice" id="scissors" src="../Rock-Paper-Scissors/imgs/scissors.png" alt="scissors">
+            </div>
+            <div id="interface">
+                <button class="playButtons" @click="startGame" v-if="!gameStarted">Start Game</button>
+                <div v-show="!hasPlayerChosen" id="player-controls" v-else="gameStarted">
+                    <button class="rockButton" @click="rockChoice">ROCK</button>
+                    <button class="paperButton" @click="paperChoice">PAPER</button>
+                    <button class="scissorsButton" @click="scissorsChoice">SCISSORS</button>
+                </div>
+                <button v-if="hasPlayerChosen" @click="resetGame" class="playButtons">RESET</button>
+            </div>
+            <section class="row log" v-if="logMessages.length > 0">
+                <div class="small-12 columns">
+                  <ul>
+                    <li v-for="msg in logMessages"
+                    :class="{'player-win': msg.winner, 'npc-win': !msg.winner, 'tie-game': msg.tieGame}"
+                    >
+                        {{msg.text}}
+                    </li>
+                    <hr>
+                  </ul>
+                </div>
+              </section>
+        </div>
+        <script src="app.js" async defer></script>
+    </body>
+</html>
